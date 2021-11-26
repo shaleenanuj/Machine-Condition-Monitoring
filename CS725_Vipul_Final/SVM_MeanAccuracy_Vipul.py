@@ -40,6 +40,7 @@ X = dataset[:,0:8].astype(float)
 Y = dataset[:,8].astype(int)
 
 svm_model = svm.SVC(kernel='rbf', C=84, gamma=2)
+# svm_model = svm.SVC(kernel='linear', C=84)
 standardizer = StandardScaler()
 
 pipeline = make_pipeline(standardizer, svm_model)
